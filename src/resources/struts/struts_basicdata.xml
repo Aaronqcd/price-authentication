@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+     <package name="basicdata" extends="default"  namespace="/basicdata">
+	      <action name="viewCodeList"  class="basicDataMangerAction" method="viewCodeList">
+				<result name="success">/jsp/basicdata/basedata.jsp</result>
+			</action>
+	      <action name="viewCodeContent"  class="basicDataMangerAction" method="viewCodeContent">
+				<result name="success">/jsp/basicdata/basedata_list.jsp</result>
+			</action>
+	      <action name="saveBasicData"  class="basicDataMangerAction" method="saveBasicData">
+				<result name="success" type="redirect">/basicdata/viewCodeContent.action?viewDto.id=${viewDto.id}</result>
+			</action>
+	      <action name="insertBasicData"  class="basicDataMangerAction" method="insertBasicData">
+			</action>
+			 <action name="queryBasicData"  class="basicDataMangerAction" method="queryBasicData">
+				<result name="sucess" >/jsp/basicdata/basedata_list.jsp</result>
+			</action>
+			 <action name="queryBasic"  class="basicDataMangerAction" method="queryBasic">
+				<result name="sucess" >/jsp/basicdata/add_basedata.jsp</result>
+			</action>
+			<action name="modifyBasicData"  class="basicDataMangerAction" method="modifyBasicData">
+			</action>
+			<action name="deleteBasic"  class="basicDataMangerAction" method="deleteBasic">
+				<result name="success" type="redirectAction">
+				 	<param name="actionName">viewCodeContent</param>
+				    <param name="namespace">/basicdata</param>
+				    <param name="viewDto.id">${viewDto.id}</param>
+			  	</result>
+			</action>
+			<action name="checkKey"  class="basicDataMangerAction" method="checkKey">
+			</action>
+     </package>
+</struts>

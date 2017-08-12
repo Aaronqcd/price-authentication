@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.reload" value="true" />
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="struts.multipart.maxSize" value="9999999999999" /><!-- 上传文件限制为 -->
+	<constant name="struts.multipart.saveDir" value="D:/pemng_files/temp" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.configuration.xml.reload" value="false" />
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+	<constant name="struts.action.extension" value="action"/>
+	<constant name="struts.action.excludePattern" value="/fckeditor/editor/filemanager/connectors/.*"/>
+	<!--bean class="com.opensymphony.xwork2.ObjectFactory"></bean-->
+	
+	<package name="default" extends="json-default,jasperreports-default,struts-default">
+
+    	<result-types>
+    		<result-type name="jasper" class="com.pemng.serviceSystem.base.struts2result.ChinacpJasperReportsResult"/>
+    	</result-types>
+		
+		<interceptors>
+			
+			<interceptor name="sessionAuthorityInterceptor" class="com.pemng.serviceSystem.common.interceptors.SessionAuthorityInterceptor"></interceptor>
+			<interceptor name="exception" class="com.pemng.serviceSystem.base.interceptor.ExceptionMappingInterceptor"></interceptor>
+
+			<interceptor-stack name="defaultStack">
+				<interceptor-ref name="sessionAuthorityInterceptor" >
+					<param name="excludeActions">
+						login/toLogin.action,login/doLogin.action
+					</param>					
+					<param name="butLoginExcludeActions">
+						frame/frameMainAction.action,login/loginOut.action,agency/agencyList.action,agency/agencyCmsList.action,cms/savePrintCms.action,cms/getAttachmentRes.action,cms/toPrintCms.action
+					</param>					
+				</interceptor-ref>
+				<interceptor-ref name="exception" />
+				<interceptor-ref name="alias" />
+				<interceptor-ref name="servletConfig" />
+				<interceptor-ref name="prepare" />
+				<interceptor-ref name="i18n" />
+				<interceptor-ref name="chain" />
+				<interceptor-ref name="debugging" />
+				<interceptor-ref name="profiling" />
+				<interceptor-ref name="scopedModelDriven" />
+				<interceptor-ref name="modelDriven" />
+				<interceptor-ref name="fileUpload" />
+				<interceptor-ref name="checkbox" />
+				<interceptor-ref name="staticParams" />
+				<interceptor-ref name="params">
+					<param name="excludeParams">dojo\..*</param>
+				</interceptor-ref>
+				<interceptor-ref name="conversionError" />
+				<interceptor-ref name="validation">
+					<param name="excludeMethods">
+						input,back,cancel,browse
+					</param>
+				</interceptor-ref>
+				<interceptor-ref name="workflow">
+					<param name="excludeMethods">
+						input,back,cancel,browse
+					</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="defaultStack" />
+
+		<global-results>
+			<result name="success">/jsp/common/success.jsp</result>
+			<result name="loginPage" type="redirect">/login/toLogin.action</result>
+						
+			<result name="accessDenied">
+				/jsp/common/access_denied.jsp
+			</result>
+			<!--result name="timeout">/jsp/common/nologin_or_timeout.jsp</result-->
+			<result name="timeout">
+				/jsp/common/timeout_judge.jsp
+			</result>
+			<result name="businessErr">
+				/jsp/common/business_error.jsp
+			</result>
+<!-- 			<result name="loginPage" type="redirect"> -->
+<!-- 				/login/initialLoginAction.action -->
+<!-- 			</result> -->
+			<result name="input">
+				/jsp/common/business_error.jsp
+			</result>			
+			<result name="exceptionErr">
+				/jsp/common/exception_error.jsp
+			</result>
+
+<!-- 			<result name="login" type="redirect">/jsp/login.jsp</result> -->
+			<result name="noright">/jsp/common/noright.jsp</result>
+			<result name="login_not_right">/jsp/common/login_not_right.jsp</result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping result="businessErr"
+				exception="com.pemng.serviceSystem.base.exception.BusinessException">
+			</exception-mapping>
+			<exception-mapping result="exceptionErr"
+				exception="java.lang.Exception">
+			</exception-mapping>
+		</global-exception-mappings>
+	</package>
+	
+	<include file="resources/struts/struts_usrmng.xml"/>
+	<include file="resources/struts/struts_basicdata.xml"/>
+	<include file="resources/struts/struts_agency.xml"/>
+	<include file="resources/struts/struts_login.xml"/>
+	<include file="resources/struts/struts_units.xml"/>
+	<include file="resources/struts/struts_frame.xml"/>
+	<include file="resources/struts/struts_common.xml"/>
+	<include file="resources/struts/struts_autocomplete.xml"/>
+	<include file="resources/struts/struts_cms.xml"/>
+	<include file="resources/struts/struts_mining.xml"/>
+</struts>

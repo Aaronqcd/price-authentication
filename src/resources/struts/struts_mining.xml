@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="mining" extends="default" namespace="/mining">
+		<action name="miningSort" class="miningAction" method="getMiningSort"/>
+		<action name="getMiningPrice" class="miningAction" method="getMiningPrice"/>
+		<action name="getMiningCount" class="miningAction" method="getMiningCount"/>
+		<action name="addMiningSort" class="miningAction" method="addMiningSort"/>
+		<action name="renameMiningSort" class="miningAction" method="renameMiningSort"/>
+		<action name="removeMiningSort" class="miningAction" method="removeMiningSort"/>
+		<action name="removeMining" class="miningAction" method="removeMining"/>
+		<action name="miningList" class="miningAction" method="miningPriceList">
+			<result>/jsp/mining/mining_list.jsp</result>
+		</action>
+		<action name="mining" class="miningAction" method="mining">
+			<result>/jsp/mining/mining_sort.jsp</result>
+		</action>
+		<action name="addMiningPrice" class="miningAction" method="addMiningPrice">
+			<result>/jsp/mining/mining_sort.jsp</result>
+		</action>
+		<action name="updateMiningPrice" class="miningAction" method="updateMiningPrice">
+			<result>/jsp/mining/mining_sort.jsp</result>
+		</action>
+		<action name="toImpMinings" class="miningAction">
+			<result>/jsp/mining/imp_minings.jsp</result>
+		</action>
+		<action name="impMinings" class="miningAction" method="impMinings">
+			<result>/jsp/mining/imp_minings.jsp</result>
+		</action>
+		<action name="dwnMiningsTmp" class="miningAction" method="dwnMiningsTmp"/>
+		
+	</package>
+</struts>

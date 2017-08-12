@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-3.0.xsd
+         http://www.springframework.org/schema/tx
+      	 http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	
+	<!-- Service配置在这里 -->
+	
+	<!-- user -->
+	 <bean id="userMangerService" class="com.pemng.serviceSystem.usrmng.services.impl.UserMangerServiceImpl">
+		<property name="userInfoDao" ref="userInfoDao"></property>
+		<property name="userRoleRelDao" ref="userRoleRelDao"></property>
+	</bean> 
+	 
+	 
+	 <!-- role -->
+	 <bean id="roleMangerService" class="com.pemng.serviceSystem.usrmng.services.impl.RoleMangerServiceImpl">
+		<property name="roleInfoDao" ref="roleInfoDao"></property>
+	</bean>  
+	
+   <!-- userRole -->	
+	<bean id="userRoleRelMangerService" class="com.pemng.serviceSystem.usrmng.services.impl.UserRoleRelMangerServiceImpl">
+		<property name="userRoleRelDao" ref="userRoleRelDao"></property>
+	</bean> 
+	
+	  <!-- fnctn -->	
+	<bean id="fnctnMangerService" class="com.pemng.serviceSystem.usrmng.services.impl.FnctnMangerServiceImpl">
+		<property name="fnctnDao" ref="fnctnDao"></property>
+	</bean> 
+	<!--  <context:component-scan base-package="com.**.usrmng.service" /> -->
+</beans>

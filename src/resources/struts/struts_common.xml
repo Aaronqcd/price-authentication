@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="common" extends="default"  namespace="/common">
+		<!-- 修改密码 -->
+		<action name="changePassWordAction" class="changePassWordAction" method="changePassWord">  
+			<result name="sucess">/jsp/common/changepwdok.jsp</result>
+			<result name="fail">/jsp/common/changepwdfail.jsp</result>
+		</action>
+		
+		<action name="toChangePassword" class="changePassWordAction" method="inint">  
+			<result name="sucess">/jsp/common/editpassword.jsp</result>
+		</action>
+	</package>
+</struts>

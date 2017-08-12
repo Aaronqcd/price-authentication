@@ -1,0 +1,304 @@
+@charset "UTF-8";
+/* CSS Document */
+*{ margin:0; padding:0; list-style:none; font-size:14px;font-family:宋体,STHeiti,MingLiu}
+.top{ height:93px; background:url(../images/topbj.jpg) repeat-x}
+.left{ float:left; }
+.toplogo{height:61px; color:#fff}
+.toplogo img{ float:left; margin-right:10px}
+.toplogo p{ float:left; margin-top:30px}
+.toplogo a{ color:#FFFFFF; text-decoration:underline}
+.toppic{ float:right;} 
+a{ text-decoration:underline}
+
+*{ margin:0; padding:0; list-style:none; font-size:13px;font-family:"Microsoft YaHei",宋体,"Microsoft JhengHei",����ϸ��,STHeiti,MingLiu}
+.topwz{ background:url(../images/logo.jpg) no-repeat left; height:20px; padding:34px 0 0px 210px; color:#FFFFFF }
+.topwz1{ background:url(../images/logo2.jpg) no-repeat left; height:20px; padding:34px 0 0px 210px; color:#FFFFFF }
+
+.logo{ background:url(../images/logobj.jpg) repeat-x; height:54px;}
+.nav{ background:url(../images/mauebj.png) repeat-x; height:34px; margin-bottom:1px}
+.title1{ background:#E5E5E5; border-bottom:#D6D6D6 solid 1px; border-top:#D6D6D6 solid 1px; height:36px; line-height:36px; padding:0 10px}
+.title2{ background: url(../images/tit1.png) no-repeat left #E5E5E5; border:#D6D6D6 solid 1px; height:36px; line-height:36px; color:#0E6FA2; font-weight:bold; padding:0 0 0 50px}
+.title3{ background: url(../images/tit2.png) no-repeat left #E5E5E5; border:#D6D6D6 solid 1px; height:36px; line-height:36px; color:#0E6FA2; font-weight:bold; padding:0 0 0 50px}
+
+.title4{ background:#E5E5E5; border-bottom:#D6D6D6 solid 1px; border-top:#D6D6D6 solid 1px; height:36px; line-height:36px; }
+
+.sy{ background:url(../images/sybt.png) no-repeat; padding:0 10px 0 20px}
+.jt{ background:url(../images/jt.png) no-repeat; padding:0 20px; color:#0E6FA2; font-weight:bold}
+.jtk{ background:url(../images/jt.png) no-repeat #E5E5E5 0 6px; padding:0 20px; color:#0E6FA2; font-weight:bold; height:28px; line-height:28px}
+.srk{ margin:0px 0 5px 0; border:#0E6FA2 1px solid; height:300px; background:#E5F0F7; padding:5px; line-height:20px; overflow:auto}
+.srkjl{ margin:0px 0 5px 0; border:#0E6FA2 1px solid; height:200px; background:#E5F0F7; padding:5px; line-height:20px; overflow:auto}
+
+.srk1{ margin:5px 0; background:#f4f4f4; line-height:20px; border:#bbb solid 1px; height:auto; overflow:hidden}
+.srk1_ren{ background:url(../images/xfn-friend.png) no-repeat 2px 4px #fff; height:25px; padding-left:20px; line-height:25px ;border-bottom:#0E6FA2 1px solid; padding-right:5px}
+.srk1_ren_1{ background:url(../images/xfn-friend.png) no-repeat 2px 4px #C1D7EB; height:25px; padding-left:20px; line-height:25px ;border-bottom:#0E6FA2 1px solid; padding-right:5px}
+.srk1wz{padding:5px; line-height:20px; background:#fff}
+.left{ float:left}
+.right{ float:right}
+.input1{ border:#CCCCCC solid 1px; background:#fff; height:20px; line-height:20px; margin-right:20px ; width:130px; color:#999999 }
+.input2{ border:#bbb solid 1px; background:#fff; height:20px; line-height:20px; width:80px; color:#999999 }
+.input3{ border:#bbb solid 1px; background:#fff; height:20px; line-height:20px; width:250px; color:#999999 }
+.input3-1{ border:#bbb solid 1px; background:#fff; height:25px; line-height:25px; width:250px; color:#999999 }
+
+.input5{ border:#bbb solid 1px; background:#fff; height:20px; line-height:20px; width:350px; color:#999999 }
+.input5-1{ border:#bbb solid 1px; background:#fff; height:20px; line-height:20px; width:400px; color:#999999 }
+
+.input4{ border:#bbb solid 1px; background:#fff; height:20px; line-height:20px; width:120px; color:#999999 }
+.anniu{ width:74px; height:28px; background:url(images/anniu.png) no-repeat; border:0}
+.input6{ border:#bbb solid 1px; background:#fff; height:20px; line-height:20px; width:60px; color:#999999 }
+.textarea1{ border:#CCCCCC solid 1px; background:#fff; height:25px; line-height:25px; margin-right:20px ; width:96%; color:#999999; height:100px }
+.textarea2{ border:#CCCCCC solid 1px; background:#fff; height:25px; line-height:25px; margin-right:20px ; width:100%; color:#999999; height:100px }
+
+.buttom{ width:60px; height:24px; line-height:24px; background:url(images/anniu.png) no-repeat; border:0; color:#FFFFFF; margin-right:10px}
+.buttomlv{ width:60px; height:24px; line-height:24px; background:url(images/anniu.png) no-repeat; border:0; color:#FFFFFF; margin-right:10px}
+.buttomx1{ width:44px; height:24px; cursor: pointer;line-height:24px; background:url(images/anniu.png) no-repeat; border:0; color:#FFFFFF; margin-left:10px; font-weight:bold}
+.buttomx1-1{ width:104px; height:24px; line-height:24px; background:url(images/anniu.png) no-repeat; border:0; color:#FFFFFF; margin-left:10px; font-weight:bold}
+
+.buttomx2{ width:44px; height:24px; line-height:24px; background:url(images/anniu.png) no-repeat; border:0; color:#FFFFFF; margin-left:10px; font-weight:bold}
+.buttomx3{ width:44px; height:24px; line-height:24px; background:url(images/anniu.png) no-repeat; border:0; color:#FFFFFF; margin-left:10px; font-weight:bold}
+.buttomx4{ width:44px; height:24px; line-height:24px; background:url(images/anniu.png) no-repeat; border:0; color:#FFFFFF; margin-left:0px; font-weight:bold}
+.fangniu{ background:url(../images/fangniu.png) no-repeat; height:24px; line-height:24px; border:0; color:#FFFFFF; font-size:11px; font-weight:bold; width:27px; margin:5px; font-family:Arial, Helvetica, sans-serif}
+
+.buttomk{ float:left; padding:0; margin:0}
+.buttomk1{ height:30px; margin-top:5px; float:right; margin-right:20px}
+.buttomk2{ height:30px; margin-top:25px; text-align:center; }
+.buttomk3{ height:30px; margin:10px 0 5px 0}
+.buttomk3-1{ height:25px; margin:5px 0 0px 0; padding:0}
+
+
+
+.clear{ clear:both}
+/*  查询区域  */
+.kuang{ padding:0 10px 0 10px; }
+.kuang2{ padding:10px 0; }
+.kuang2-1{ padding:5px 0 10px 0; }
+
+.box{ padding:0px;z-index:9999;position: relative; width:600px}
+.box1{ margin-top:10px}
+.box1 table{ width:100%; }
+.box1 table th{ background:url(images/bjta1.png) repeat-x; height:35px; line-height:35px; color:#07363e; font-weight:normal}
+.box1 table td{height:27px; text-align:center; padding:3px; font-size:14px}
+
+.box1-1{ margin:auto; background:#f9f9f9; padding:5px; border:#CDCDCD 1px solid; margin-bottom:5px }
+.box1-1 table{ margin:10px; width:98%}
+.box1-1 table th{ font-weight:normal; text-align:left; white-space:nowrap}
+.box1-1 table td{ padding:2px}
+.box1-1 a{ margin-left:10px; color:#000066}
+.ss{ float:right;}
+.ss img{ vertical-align:middle; margin-right:5px}
+.ss a{ color:#0E6FA2;}
+/*  查询结果  */
+.box2{ margin:auto}
+.box2 table{ margin:auto; padding:0; width:99%}
+.box2 table th{ white-space:nowrap; height:35px; line-height:28px;border-bottom:#C6C6C6 1px solid;}
+.box2 table td{ border-bottom:#C6C6C6 1px solid; height:25px ; line-height:25px; color:#666666}
+
+.box2-1{ margin:auto}
+.box2-1 table{ margin:auto; padding:0; width:99%}
+.box2-1 table th{ white-space:nowrap; height:35px; line-height:28px;border-bottom:#C6C6C6 1px solid; text-align:left}
+.box2-1 table td{ border-bottom:#C6C6C6 1px solid; height:25px ; line-height:25px; color:#666666}
+.td1{ background:url(images/bjta.png) top repeat-x; }
+.td2{ background:#fff}
+/*  翻页  */
+.fany{ float:left}
+.fany2{ float:right}
+.fany2 img{ margin-right:8px}
+/*  详细信息  */
+.kuang1{ padding:5px; margin:10px;background:#E6F4FC; border:#53B5E9 solid 1px; height:auto; overflow:hidden}
+.box3{ background:#f9f9f9; padding:5px; border-bottom:#CDCDCD 1px solid;border-left:#CDCDCD 1px solid;border-right:#CDCDCD 1px solid;}
+.box3 table{ margin:0 10px 10px 10px; width:98%}
+.box3 table th{ font-weight:normal; text-align:left; white-space:nowrap}
+.box3 table td{ padding:2px}
+
+.box4{ background:#fff; padding:0px; border-bottom:#CDCDCD 1px solid;border-left:#CDCDCD 1px solid;border-right:#CDCDCD 1px solid;}
+.box4 table{ width:100%}
+.box4 table th{ white-space:nowrap; height:35px; line-height:28px;border-bottom:#C6C6C6 1px solid;}
+.box4 table td{ border-bottom:#C6C6C6 1px solid; height:25px ; line-height:25px; color:#666666; padding:5px 0; text-align:center}
+
+.box4-1{ background:#fff; padding:0px; margin-top:5px;border:#CDCDCD 1px solid;margin:auto; width:99%}
+.box4-1 table{ width:100%}
+.box4-1 table th{ white-space:nowrap; height:35px; line-height:28px;border-bottom:#C6C6C6 1px solid;}
+.box4-1 table td{ border-bottom:#C6C6C6 1px solid; height:25px ; line-height:25px; color:#666666; padding:5px 0; text-align:center}
+
+/*  详细信息弹出  */
+.kuangtc{ padding:5px; margin:10px;background:#E6F4FC; border:#53B5E9 solid 1px; height:auto; y-overflow:hidden; width:980px;margin:10px auto;}
+.box3-tc{ background:url(images/bj1.png) repeat-x bottom #fff; padding:5px; border-bottom:#CDCDCD 1px solid;border-left:#CDCDCD 1px solid;border-right:#CDCDCD 1px solid; }
+.box3-tc table{ margin:0 10px 10px 10px; width:100%}
+.box3-tc table th{ font-weight:normal; text-align:left; white-space:nowrap}
+.box3-tc table td{ padding:2px}
+
+.box_fx{background:#f9f9f9; padding:5px; border-bottom:#CDCDCD 1px solid;border-left:#CDCDCD 1px solid;border-right:#CDCDCD 1px solid;}
+.box_fx table{ background:#fff; }
+.box_fx select { width:250px;height:300px; background:url(../images/input.gif) repeat-x left top; border:#A4A4A4 solid 1px} 
+.box_fx p{ line-height:30px}
+
+/*  登录页面  */
+
+.loginbody{ background:url(../images/login_bj.jpg) no-repeat top #0B76A9}
+.loginbanner{ margin:auto; width:1000px}
+.login{ margin:auto; top:10px; background:url(../images/loging.png) no-repeat; width:731px; height:493px; position:relative}
+.loginmis{ margin:auto; top:10px; background:url(../images/logingmis.png) no-repeat; width:731px; height:493px; position:relative}
+
+.loginnr{ padding:160px 180px 0 200px}
+.loginnr p{ line-height:20px; font-size:15px; color:#fff}
+.loginginput{ background: url(../images/bj2.png) repeat-x; height:21px; border:#9D9C9C solid 1px; margin:5px 0 10px 0; width:335px; line-height:21px; padding-left:5px }
+.loginnr a{font-size:15px; color:#fff; }
+.loginnaniu{ background:url(../images/loginanniu.png) no-repeat; border:0; height:23px; width:58px; line-height:23px; font-size:14px; color:#353535; margin:auto }
+
+/*  平台页面  */
+
+.title4{ background: url(../images/tit2.png) no-repeat left #E5E5E5; border:#D6D6D6 solid 1px; height:36px; line-height:36px; color:#0E6FA2; font-weight:bold; padding:0 0 0 50px; margin-top:10px}
+
+.box5{ background:#fff; border-left:#CDCDCD 1px solid;border-right:#CDCDCD 1px solid;  }
+.box5 table{ width:100%;border-top:#CDCDCD 1px solid;}
+.box5 table th{ white-space:nowrap; height:28px; line-height:28px;border-bottom:#B9B9B9 1px solid;background:#f9f9f9;}
+.box5 table td{ border-bottom:#B9B9B9 1px solid; height:25px ; line-height:25px; color:#666666; padding:2px 0; text-align:center;background:#fff; }
+
+.box6{ background:#f9f9f9; padding:5px; border-bottom:#CDCDCD 1px solid;border-left:#CDCDCD 1px solid;border-right:#CDCDCD 1px solid;}
+.box6 table{ margin:0 5px 5px 5px; width:99%}
+.box6 table th{ font-weight:normal; text-align:left; white-space:nowrap;}
+.box6 table td{ padding:2px}
+
+.box6-1{ background:#fff; padding:5px; border:#CDCDCD 1px solid;}
+.box6-1 table{ margin:0 5px 5px 5px; width:99%}
+.box6-1 table th{ font-weight:normal; text-align:left; white-space:nowrap;}
+.box6-1 table td{ padding:2px;}
+.box6-1 input{ margin-right:10px}
+.bait{ padding:5px}
+
+.red{ color:#FF0000; margin-right:5px;font-weight:bold}
+.red2{ color:#FF9900; margin-right:5px;font-weight:bold}
+.red3{ color:#3366FF; margin-right:5px;font-weight:bold}
+.red4{ color:#666666; margin-right:5px; font-weight:bold}
+
+/*  tab  */
+ .tabsJ {
+      float:left;
+      width:100%;
+      background:#F4F4F4;
+      font-size:93%;
+      line-height:normal;
+	  border-bottom:1px solid #24618E; 
+      }
+    .tabsJ ul {
+	margin:0;
+	padding:10px 10px 0 10px;
+	list-style:none;
+      }
+    .tabsJ li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    .tabsJ a {
+      float:left;
+      background:url("../images/tableftJ.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 5px;
+      text-decoration:none;
+      }
+    .tabsJ a span {
+      float:left;
+      display:block;
+      background:url("../images/tabrightJ.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#24618E;
+      }
+   
+
+    .tabsJ a:hover {background-position:0% -42px;
+    
+      }
+    .tabsJ a:hover span { background-position:100% -42px; color:#FFF;
+ 
+      }
+	  
+	  .tabsJdq a {
+      float:left;
+      background:url("../images/tableftJ.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 5px;
+      text-decoration:none;  background-position:0% -42px; border:0
+      }
+.tabsJdq a span {
+      float:left;
+      display:block;
+      background:url("../images/tabrightJ.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#24618E;
+	  background-position:100% -42px; color:#FFF;
+      }
+
+/*里面的那个*/
+
+  .xtabsJ {
+      width:100%;
+      font-size:13px;
+      line-height:normal; height:28px; margin-top:10px
+      }
+    .xtabsJ ul {
+	margin:0;
+	padding:10px ;
+	list-style:none;
+      }
+    .xtabsJ li {
+      display:inline;
+      margin:0;
+      padding:0; 
+      }
+    .xtabsJ a {
+      float:left;
+      margin:0;
+    border-right:#858585 solid 1px}
+    .xtabsJ a span {
+      float:left;
+      display:block;
+       color:#24618E;  padding:0px 5px 0px 5px;  
+   
+      }
+   
+
+    .xtabsJ a:hover {
+    
+      }
+    .xtabsJ a:hover span { color:#383838;text-decoration:underline;
+      }
+	  
+	  .xtabsJdq a {
+      float:left;
+      margin:0;
+      padding:0 0 0 8px;
+      text-decoration:none; background:url(../images/status-busy.png) no-repeat 0 -1px; font-weight:bold
+      }
+.xtabsJdq a span {
+      float:left;
+      display:block;
+   color:#383838; text-decoration:none;
+
+      }
+
+
+
+
+.tabnr{ margin:5px; }
+
+.span1{ margin:0 10px; vertical-align:middle}
+.span1 input{ margin-left:10px; margin-right:6px; }
+
+
+
+/*   代办事项   */
+.daiban{ float:left; width:48.3%; margin:0 10px 10px 0; padding-right:10px}
+.daiban ul{ padding:10px}
+.daiban li{ background:url(../images/balloon-buzz.png) no-repeat 0 1px; padding:0 0 0 23px; height:28px}
+.daiban a{ color:#FF6600}
+
+.daiban1{ margin:0 10px 10px 0; padding-right:10px; }
+
+.daiban tr {
+    background: no-repeat scroll 0 1px transparent;color:gray;
+    height: 28px;
+    padding: 0 0 0 23px;
+}
+.daibanpng {
+    background: url("../images/balloon-buzz.png") no-repeat scroll 0 1px transparent;
+}

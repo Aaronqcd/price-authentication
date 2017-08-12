@@ -1,0 +1,8 @@
+/* CSS Document */
+*{ margin:0; padding:0; list-style:none; font-size:13px;font-family:  "Microsoft Yahei", "新宋体", "宋体"; }
+table{border-collapse:collapse;}
+a{ text-decoration:none}
+
+/*底部页面*/
+
+.bottom{ background:#D4DBF0; height:5%; margin:0; text-align:center; padding:10px}

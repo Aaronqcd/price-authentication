@@ -1,0 +1,48 @@
+#sddm
+{	margin: 0 ;
+	padding: 0; float:left;
+	height:28px;}
+
+#sddm li
+{	margin: 0;
+	padding: 0;
+	list-style: none;
+	height:28px;
+	float: left;
+	font: 12px}
+
+#sddm li a
+{	display: block;
+	margin: 0 1px 0 0; line-height:28px; padding:0 10px 0 10px;
+	width: 60px;
+	color: #FFF;
+	height:28px;
+	text-align: center;
+	text-decoration: none}
+
+#sddm li a:hover
+{	background: #49A3FF}
+
+#sddm div
+{	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #EAEBD8;
+	border-bottom: 1px solid #5970B2;border-left: 1px solid #5970B2;border-right: 1px solid #5970B2}
+
+	#sddm div a
+	{	position: relative;
+		display: block;
+		margin: 0; height:28px; line-height:28px;
+		width: auto;
+		white-space: nowrap;
+		text-align: left;
+		text-decoration: none;
+		background: #EAEBD8;
+		color: #2875DE;
+		}
+
+	#sddm div a:hover
+	{	background: #49A3FF;
+		color: #FFF}

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-3.0.xsd
+         http://www.springframework.org/schema/tx
+      	 http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+		 
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:/resources/hibernate/jdbc.properties</value>
+				<!-- 系统路径相关配置 -->
+				<value>classpath:/resources/system.properties</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- 定义Hibernate的SessionFactory -->
+	<!-- 依赖注入数据源，注入正是上面定义的dataSource -->
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan">
+			<list>
+				<value>com.pemng.serviceSystem.pojo</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.current_session_context_class">
+					thread
+				</prop>
+				<prop key="javax.persistence.validation.mode">
+					none
+				</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<!--<prop key="hibernate.hbm2ddl.auto">update</prop>-->
+			</props>
+		</property>
+
+	</bean>
+	
+	<bean id="dbcpJdbcExtractor" class="org.springframework.jdbc.support.nativejdbc.CommonsDbcpNativeJdbcExtractor"/>
+
+	<bean id="hibernateTemplate"
+		class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 配置Hibernate的局部事务管理器，使用HibernateTransactionManager类 -->
+		<!-- 该类实现PlatformTransactionManager接口，是针对Hibernate的特定实现-->
+		<!-- 并注入SessionFactory的引用 -->
+		<bean id="txManager"
+			class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+			p:sessionFactory-ref="sessionFactory" />
+
+		<tx:advice id="txAdvice" transaction-manager="txManager">
+			<!-- 用于配置详细的事务语义 -->
+			<tx:attributes>
+				<tx:method name="get*" read-only="true"/>
+				<tx:method name="retrieve*" read-only="true"/>
+				<tx:method name="query*" read-only="true"/>
+				<tx:method name="list*" read-only="true"/>
+				<tx:method name="search*" read-only="true"/>
+				<tx:method name="page*" read-only="true"/>
+				<tx:method name="newTranc*" propagation="REQUIRES_NEW" rollback-for="Throwable" no-rollback-for="NoRollbackBusinessException" />
+				<tx:method name="*" propagation="REQUIRED" rollback-for="Throwable" no-rollback-for="NoRollbackBusinessException" />
+			</tx:attributes>
+		</tx:advice>
+
+		<aop:config>
+			<aop:pointcut id="serviceOperation" expression="${aop.transaction.pointcut.expression}"/>
+			<aop:pointcut id="serviceOperationbg" expression="${aop.transaction_bg.pointcut.expression}"/>
+			<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation"/>
+			<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperationbg"/>
+		</aop:config>
+		
+	<!-- for test -->
+	<bean id="daoLoggingInterceptor" class="com.pemng.serviceSystem.base.interceptor.ExcecuteLoggingAdvisor">
+		<property name="logger" ref="dao_log"></property>
+	</bean>
+	<aop:config>
+		<aop:pointcut id="daoLoggingPointcut" expression="${aop.methodmonitor.pointcut.expression}"/>
+		<aop:pointcut id="daoLoggingPointcut_bg" expression="${aop.methodmonitor_bg.pointcut.expression}"/>
+		<aop:pointcut id="serviceLoggingPointcut" expression="${aop.transaction.pointcut.expression}"/>
+		<aop:pointcut id="serviceLoggingPointcut_bg" expression="${aop.transaction_bg.pointcut.expression}"/>
+		<aop:aspect id="daoLoggingAspect" ref="daoLoggingInterceptor" >
+			<aop:around method="aroundMethod" pointcut-ref="daoLoggingPointcut" />
+			<aop:around method="aroundMethod" pointcut-ref="daoLoggingPointcut_bg" />
+			<aop:around method="aroundMethod" pointcut-ref="serviceLoggingPointcut" />
+			<aop:around method="aroundMethod" pointcut-ref="serviceLoggingPointcut_bg" />
+		</aop:aspect>
+	</aop:config>	
+	
+	
+	<context:annotation-config />
+ 	<context:component-scan base-package="com.pemng.serviceSystem.claim.*" /> 
+	
+	
+		<!-- logger -->
+	<bean id="logger" class="org.slf4j.LoggerFactory" factory-method="getLogger">
+		<constructor-arg type="java.lang.String" value=""></constructor-arg>
+	</bean>
+	
+	<bean id="action_log" class="org.slf4j.LoggerFactory" factory-method="getLogger">
+		<constructor-arg type="java.lang.String" value="action_log"></constructor-arg>
+	</bean>	
+	<bean id="service_log" class="org.slf4j.LoggerFactory" factory-method="getLogger">
+		<constructor-arg type="java.lang.String" value="service_log"></constructor-arg>
+	</bean>	
+	<bean id="dao_log" class="org.slf4j.LoggerFactory" factory-method="getLogger">
+		<constructor-arg type="java.lang.String" value="dao_log"></constructor-arg>
+	</bean>	
+	
+	<bean id="job_log" class="org.slf4j.LoggerFactory" factory-method="getLogger">
+		<constructor-arg type="java.lang.String" value="job_log"></constructor-arg>
+	</bean>
+	
+	<bean id="transactionUtil" class="com.pemng.serviceSystem.base.util.TransactionUtil" >
+		<property name="tm">
+			<ref local="txManager"/>
+		</property>
+	</bean>
+	
+</beans>	
+		

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="cms" extends="default"  namespace="/cms">
+	
+		<action name="aprislCertList" class="cmsAction" method="aprislCertList">
+			<result name="success">/jsp/cms/aprisl_cert_list.jsp</result>
+		</action>
+		<action name="reviewRuleList" class="cmsAction" method="reviewRuleList">
+			<result name="success">/jsp/cms/review_rule_list.jsp</result>
+		</action>
+		<action name="auditList" class="cmsAction" method="auditList">
+			<result name="success">/jsp/cms/audit_list.jsp</result>
+		</action>
+		<action name="hisCmsList" class="cmsAction" method="hisCmsList">
+			<result name="success">/jsp/cms/his_cms_list.jsp</result>
+		</action>
+		<action name="toCmsAdd" class="cmsAction" method="toCmsAdd">
+			<result name="success">/jsp/cms/add_cms.jsp</result>
+		</action>
+		<action name="saveCms" class="cmsAction" method="saveCms">
+			<result name="input">/jsp/cms/add_cms.jsp</result>
+			<result name="success" type="redirectAction">
+			 	<param name="actionName">toUpdateCms</param>
+			    <param name="namespace">/cms</param>
+			    <param name="saveDto.id">${saveDto.id}</param>
+			    <param name="cmsFlag">${cmsFlag}</param>
+			    <param name="succMsg">${succMsg}</param>
+			</result>
+		</action>
+		<action name="toUpdateCms" class="cmsAction" method="toUpdateCms">
+			<result name="upd">/jsp/cms/add_cms.jsp</result>
+		</action>
+		<action name="toAduitCms" class="cmsAction" method="toAduitCms">
+			<result name="aduit">/jsp/cms/cms_audit.jsp</result>
+		</action>
+		<action name="delCms" class="cmsAction" method="delCms">
+			<result name="acList" type="redirectAction">
+			 	<param name="actionName">aprislCertList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="cmsFlag">${cmsFlag}</param>
+			</result>
+			<result name="rrList" type="redirectAction">
+			 	<param name="actionName">reviewRuleList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="cmsFlag">${cmsFlag}</param>
+			</result>
+		</action>
+		<action name="viewCms" class="cmsAction" method="viewCms">
+			<result name="success">/jsp/cms/cms_view.jsp</result>
+		</action>
+		<!-- 委托书之委托明细 -->
+		<action name="getAprislList" class="cmsAction" method="getAprislList">
+			<result name="success">/jsp/cms/cms_detail.jsp</result>
+		</action>
+		<action name="delAprisl" class="cmsAction" method="delAprisl">
+			<result name="success">/jsp/cms/cms_detail.jsp</result>
+		</action>
+		
+		<!-- 委托书之技术报告 -->
+		<action name="techReportList" class="cmsAction" method="techReportList">
+			<result name="success">/jsp/cms/cms_tech_report.jsp</result>
+		</action>
+		<!-- 委托书之相关附件 -->
+		<action name="relateAtList" class="cmsAction" method="relateAtList">
+			<result name="success">/jsp/cms/cms_relate_at.jsp</result>
+		</action>
+		<!-- 委托书之勘验文件 -->
+		<action name="artclsRecList" class="cmsAction" method="relateAtList">
+			<result name="success">/jsp/cms/cms_artcls_rec.jsp</result>
+		</action>
+		<action name="uploadFiles" class="cmsAction" method="uploadFiles">
+			<result name="trList" type="redirectAction">
+			 	<param name="actionName">techReportList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="attachment.TCommission.id">${attachment.TCommission.id}</param>
+			    <param name="attachment.atTp">${attachment.atTp}</param>
+			    <param name="atFlag">${atFlag}</param>
+			</result>
+			<result name="ratList" type="redirectAction">
+			 	<param name="actionName">relateAtList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="attachment.tmpCmsId">${attachment.tmpCmsId}</param>
+			    <param name="attachment.TCommission.id">${attachment.TCommission.id}</param>
+			    <param name="attachment.atTp">${attachment.atTp}</param>
+			     <param name="atFlag">${atFlag}</param>
+		  	</result>
+		  	<result name="arsRecList" type="redirectAction">
+			 	<param name="actionName">artclsRecList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="attachment.TCommission.id">${attachment.TCommission.id}</param>
+			    <param name="attachment.atTp">${attachment.atTp}</param>
+			     <param name="atFlag">${atFlag}</param>
+		  	</result>
+		</action>
+		<action name="delAt" class="com.pemng.serviceSystem.cms.actions.CmsAction" method="delAt">
+			<result name="trList" type="redirectAction">
+			 	<param name="actionName">techReportList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="attachment.TCommission.id">${attachment.TCommission.id}</param>
+			    <param name="attachment.atTp">${attachment.atTp}</param>
+			</result>
+			<result name="ratList" type="redirectAction">
+			 	<param name="actionName">relateAtList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="attachment.tmpCmsId">${attachment.tmpCmsId}</param>
+			    <param name="attachment.TCommission.id">${attachment.TCommission.id}</param>
+			    <param name="attachment.atTp">${attachment.atTp}</param>
+		  	</result>
+		  	<result name="arsRecList" type="redirectAction">
+			 	<param name="actionName">artclsRecList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="attachment.TCommission.id">${attachment.TCommission.id}</param>
+			    <param name="attachment.atTp">${attachment.atTp}</param>
+		  	</result>
+		</action>
+		<!-- 选择历史案件列表 -->
+		<action name="hisCase" class="cmsAction" method="historyCase">
+			<result name="success">/jsp/cms/history_case.jsp</result>
+		</action>
+		<action name="padCodeValue" class="cmsAction" method="padCodeValue">
+			<result name="success">/jsp/cms/add_cms.jsp</result>
+		</action>
+		
+		<!-- 跳转到打印委托书页面 -->
+		<action name="toPrintCms" class="printCmsAction" method="toPrintCms">
+			<result name="success">/jsp/cms/print_cms.jsp</result>
+		</action>
+		
+		<action name="savePrintCms" class="printCmsAction" method="savePrintCms">
+			<result name="success">/jsp/cms/print_cms.jsp</result>
+		</action>
+		<!-- 受理/审核委托书 -->
+		<action name="auditCms" class="cmsAction" method="auditCms">
+			<result name="acList" type="redirectAction">
+			 	<param name="actionName">aprislCertList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="saveDto.id">${saveDto.id}</param>
+			    <param name="cmsFlag">${cmsFlag}</param>
+			</result>
+			<result name="rrList" type="redirectAction">
+			 	<param name="actionName">reviewRuleList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="saveDto.id">${saveDto.id}</param>
+			    <param name="cmsFlag">${cmsFlag}</param>
+			</result>
+			<result name="adList" type="redirectAction">
+			 	<param name="actionName">auditList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="saveDto.id">${saveDto.id}</param>
+			    <param name="cmsFlag">${cmsFlag}</param>
+			</result>
+		</action>
+		<action name="achiveCms" class="cmsAction" method="achiveCms">
+			<result name="acList" type="redirectAction">
+			 	<param name="actionName">aprislCertList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="cmsFlag">${cmsFlag}</param>
+			</result>
+			<result name="rrList" type="redirectAction">
+			 	<param name="actionName">reviewRuleList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="cmsFlag">${cmsFlag}</param>
+			</result>
+		</action>
+		<action name="downloadAttachment" class="cmsAction" method="downloadAttachment">
+			<result name="trList" type="redirectAction">
+			 	<param name="actionName">techReportList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="attachment.TCommission.id">${attachment.TCommission.id}</param>
+			    <param name="attachment.atTp">${attachment.atTp}</param>
+			    <param name="atFlag">${atFlag}</param>
+			</result>
+			<result name="ratList" type="redirectAction">
+			 	<param name="actionName">relateAtList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="attachment.tmpCmsId">${attachment.tmpCmsId}</param>
+			    <param name="attachment.TCommission.id">${attachment.TCommission.id}</param>
+			    <param name="attachment.atTp">${attachment.atTp}</param>
+			    <param name="atFlag">${atFlag}</param>
+		  	</result>
+		  	<result name="arsRecList" type="redirectAction">
+			 	<param name="actionName">artclsRecList</param>
+			    <param name="namespace">/cms</param>
+			    <param name="attachment.TCommission.id">${attachment.TCommission.id}</param>
+			    <param name="attachment.atTp">${attachment.atTp}</param>
+			    <param name="atFlag">${atFlag}</param>
+		  	</result>
+		  	<result name="hisCmsView" type="redirectAction">
+			 	<param name="actionName">viewCms</param>
+			    <param name="namespace">/cms</param>
+			    <param name="saveDto.id">${attachment.TCommission.id}</param>
+			    <param name="atFlag">${atFlag}</param>
+		  	</result>
+    	</action> 			
+		<action name="getAttachmentRes" class="attachmentAction" method="getAttachmentRes"/>
+		<action name="downLoadCms" class="cmsAction" method="downLoadCms"/>
+	</package>
+	
+	<package name="aprisl" extends="default"  namespace="/aprisl">
+		
+		<!-- 添加鉴定物品 -->
+		<action name="toCreateAprisl" class="aprislAction" method="toCreateAprisl">
+			<result name="success">/jsp/aprisl/add_aprisl.jsp</result>
+		</action>
+		
+		<action name="addAprisl" class="aprislAction" method="addAprisl">
+			<result name="success">/jsp/aprisl/aprisl.jsp</result>
+		</action>
+		<action name="selectAprisl" class="aprislAction" method="selectAprisl">
+			<result name="artcl001">/jsp/aprisl/aprisl_mobile.jsp</result>
+			<result name="artcl002">/jsp/aprisl/aprisl_default.jsp</result>
+			<result name="artcl003">/jsp/aprisl/aprisl_default.jsp</result>
+			<result name="artcl004">/jsp/aprisl/aprisl_default.jsp</result>
+			<result name="artcl005">/jsp/aprisl/aprisl_vCar.jsp</result>
+			<result name="artcl006">/jsp/aprisl/aprisl_vCarLos.jsp</result>
+			<result name="artcl007">/jsp/aprisl/aprisl_default.jsp</result>
+			<result name="artcl008">/jsp/aprisl/aprisl_jewelry.jsp</result>
+			<result name="artcl009">/jsp/aprisl/aprisl_default.jsp</result>
+			<result name="artcl010">/jsp/aprisl/aprisl_default.jsp</result>
+			<result name="artcl011">/jsp/aprisl/aprisl_default.jsp</result>
+			<result name="artcl012">/jsp/aprisl/aprisl_default.jsp</result>
+			<result name="artcl013">/jsp/aprisl/aprisl_machinery.jsp</result>
+			<result name="artcl014">/jsp/aprisl/aprisl_building.jsp</result>
+			<result name="artcl015">/jsp/aprisl/aprisl_default.jsp</result>
+			<result name="success">/jsp/aprisl/aprisl_default.jsp</result>
+		</action>
+		
+		<!-- 修改鉴定物品 -->
+		<action name="prcAprisl" class="aprislAction" method="prcAprisl">
+			<result name="success">/jsp/aprisl/update_aprisl.jsp</result>
+		</action>
+		<action name="updateAprisl" class="aprislAction" method="updateAprisl">
+			<result name="success">/jsp/aprisl/update_aprisl.jsp</result>
+		</action>
+		
+		<!-- 搜索同标的技术报告列表 -->
+		<action name="referTech" class="aprislAction" method="referTech">
+			<result name="success">/jsp/cms/tech_report_search.jsp</result>
+		</action>
+		
+		<action name="miningPriceList" class="aprislAction" method="miningPriceList">
+			<result name="success">/jsp/aprisl/prfrnc_prc.jsp</result>
+		</action>
+		<action name="mining" class="aprislAction" method="mining">
+			<result name="success">/jsp/aprisl/prfrnc_sort.jsp</result>
+		</action>
+		<action name="getPrcList" class="aprislAction" method="getPrcList">
+			<result name="success">/jsp/aprisl/prfrnc.jsp</result>
+		</action>		
+		<action name="preUpdateMin" class="aprislAction" method="preUpdateMin">
+			<result name="success">/jsp/aprisl/update_prc.jsp</result>
+		</action>
+		<action name="modifyPrc" class="aprislAction" method="modifyPrc">
+			<result name="success" type="redirect">/agency/mining.action</result>
+		</action>
+	</package>
+
+</struts>

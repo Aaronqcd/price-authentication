@@ -1,0 +1,37 @@
+#logo {
+	background:url(../../img/logo-1.gif);	
+}
+ul.nav {
+	background:#1071bc url(../../img/toolbar-bg.png) repeat-x;
+}
+ul.main li a {
+	background:url(../../img/toolbar-bg.png) repeat-x;
+}
+.kandyTabs .tabtitle {
+	border-bottom:1px solid #1071bc;
+}
+.kandyTabs .tabtitle .tabcur {
+	padding:2px 10px 2px 10px;
+	border-top: 1px #1071bc solid;
+	border-left: 1px #1071bc solid;
+	border-right: 1px #1071bc solid;
+	background:url(../../img/box-header-highlight-1.png) repeat-x;
+}
+#search_content {
+	border:2px solid #1071bc;
+}
+#search-button {
+	background:url(../../img/search-1.png);
+}
+.box h2 {
+	border-bottom: 1px solid #1071bc;
+}
+ul.menu li a {
+	background:url(../../img/arrow_go-1.gif) 0px 0px no-repeat;
+}
+.toggler {
+	background: #eee url(../../img/arrow_go-1.gif) 2px 4px no-repeat;
+}
+.pagination li a {
+	background-image:url(../../img/pagination-1.png);
+}

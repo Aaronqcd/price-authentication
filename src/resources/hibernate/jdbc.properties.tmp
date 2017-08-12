@@ -1,0 +1,29 @@
+jdbc.properties
+
+jdbc.driverClassName=com.mysql.jdbc.Driver
+
+jdbc.url=jdbc:mysql://192.168.108.133:3306/pedb
+
+jdbc.username=pesysdb
+
+jdbc.password=password
+
+cpool.checkoutTimeout=5000
+
+cpool.minPoolSize=1
+
+cpool.maxPoolSize=4
+
+cpool.maxIdleTime=25200
+
+cpool.maxIdleTimeExcessConnections=1800
+
+cpool.acquireIncrement=5
+
+aop.transaction.pointcut.expression=execution(* com.pemng.serviceSystem.*.services.*.*(..))
+aop.transaction_bg.pointcut.expression=execution(* com.pemng.serviceSystem.*.services.impl.*.*(..))
+
+aop.methodmonitor.pointcut.expression=execution(* com.pemng.serviceSystem.*.dao.*.*(..))
+aop.methodmonitor_bg.pointcut.expression=execution(* com.pemng.serviceSystem.*.dao.impl.*.*(..))
+
+datasource.jndi=jdbc/wserviceLine

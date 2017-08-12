@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/* CSS Document */
+*{ margin:0; padding:0; list-style:none; font-size:14px;font-family:宋体,STHeiti,MingLiu}
+.top{ height:93px; background:url(../images/topbj.jpg) repeat-x}
+.left{ float:left; }
+.toplogo{height:61px; color:#fff}
+.toplogo img{ float:left; margin-right:10px}
+.toplogo p{ float:left; margin-top:30px}
+.toplogo a{ color:#FFFFFF; text-decoration:underline}
+.toppic{ float:right;} 
+a{ text-decoration:underline}
+
+h3{ background:url(../images/jiantou.png) no-repeat 3px 6px;  border-bottom:#416678 solid 1px; height:25px; padding-top:10px; padding-left:25px; color:#203c51 }
+h4{ background:url(../images/jiantou1.png) no-repeat 3px 8px;  height:25px; padding-top:10px; padding-left:25px; color:#203c51 ; font-size:14px}
+h5{ background:url(../images/tianjia.png) no-repeat 3px 3px;  height:25px; padding-top:10px; padding-left:30px; color:#203c51 ; font-size:14px; margin-top:10px}
+h5 a{ color:#333333}
+
+.box3-tc{ background:url(../images/bj1.png) repeat-x bottom #fff; padding:5px; border-bottom:#CDCDCD 1px solid;border-left:#CDCDCD 1px solid;border-right:#CDCDCD 1px solid; }
+.box3-tc table{ margin:0 10px 10px 10px; width:98%}
+.box3-tc table th{ font-weight:normal; text-align:left; white-space:nowrap}
+.box3-tc table td{ padding:2px}
+
+.box_fx{background:#f9f9f9; padding:5px; border-bottom:#CDCDCD 1px solid;border-left:#CDCDCD 1px solid;border-right:#CDCDCD 1px solid;}
+.box_fx table{ background:#fff; }
+.box_fx select { width:250px;height:300px; background:url(../images/input.gif) repeat-x left top; border:#A4A4A4 solid 1px} 
+.box_fx p{ line-height:30px}
+
+.input1{ border:#CCCCCC solid 1px; background:#fff; height:20px; line-height:20px; margin-right:20px ; width:130px;}
+.input2{ border:#CCCCCC solid 1px; background:#fff; height:20px; line-height:20px;  width:130px;}
+.input3{ border:#CCCCCC solid 1px; background:#fff; height:20px; line-height:20px; margin-right:20px ; width:600px;}
+
+.anniu{background:url(../images/anniu1.png) repeat-x; border:#999 1px solid; height:25px; padding:0 7px}
+.buttomk1{ height:30px; margin-top:5px; float:right; margin-right:20px}
+.anniu2{ width:69px; height:26px; background:url(../images/anniu2.png) no-repeat; border:0}
+
+.buttomk2{ height:30px; margin-top:5px ; background:#fff; border-top:#fff solid 1px; border-bottom:#fff solid 1px; padding:5px}
+
+
+.box1{ margin-top:10px}
+.box1 table{ width:100%; }
+.box1 table th{ background:url(../images/bjta1.png) repeat-x; height:35px; line-height:35px; color:#07363e; font-weight:normal}
+.box1 table td{height:27px; text-align:center; padding:3px; font-size:14px}
+
+
+
+.td1{ background:url(../images/bjta.png) top repeat-x; }
+.td2{ background:#fff}
+.fanye{ float:right; padding:5px}
+.fanye a{ margin:0 3px 0 3px; color:#333333}
+.clear{ clear:both}
+.bottom{ height:63px; background:url(../images/bottombj.png) repeat-x top left; text-align:center; line-height:30px; margin-top:10px; padding-top:20px}
+.dkuang{ background:#c3c3c3; height:auto; overflow:hidden}
+
+.box2{margin-top:5px; background:#ededed; border-top:#fff solid 1px; border-bottom:#fff solid 1px; height:auto; overflow:hidden}
+.box2 table{ width:100%; }
+.box2 table th{ text-align:left; width:100px; white-space:nowrap; line-height:22px}
+.box2 table td{ height:25px}
+.box2 span{ color:#FF0000}
+.box2 b{ margin-left:5px}
+
+.box3{margin-top:5px; background:#ededed; border-top:#fff solid 1px; border-bottom:#fff solid 1px; height:auto; overflow:hidden; }
+.box3 table{ width:100%; }
+.box3 table th{ background:#2c5567; height:35px; line-height:35px; color:#fff; font-weight:normal}
+.box3 table td{ height:25px; line-height:22px; font-weight:normal; border-bottom:solid 1px #2c5567; text-align:center}
+
+/*无权限页面使用*/
+.tanchuk2{ width:524px; height:213px; background:url(images/tanchuk-1.jpg) no-repeat; margin:auto;}
+.tabchuk2_wz{ padding:70px 40px 20px 120px; font-size:14px; font-weight:bold; color:#333}
+.tanchukk{ background-color:#faf8f9; padding:30px; }
+
+/*tab页*/
+.tabsJ ul {margin:0;padding:10px 10px 0 10px;list-style:none;}
+.tabsJ li {display:inline;margin:0;padding:0;}
+.tabsJ a {float:left; background:url("../images/tableftJ.gif") no-repeat left top;margin:0;padding:0 0 0 5px; text-decoration:none;}
+.tabsJ a span {float:left; display:block;background:url("../images/tabrightJ.gif") no-repeat right top; padding:5px 15px 4px 6px; color:#24618E;}
+
+.tabsJ a:hover {background-position:0% -42px;}
+.tabsJ a:hover span { background-position:100% -42px; color:#FFF; }
+.tabsJ {float:left;width:100%;background:#F4F4F4;font-size:93%;line-height:normal;border-bottom:1px solid #24618E;}
+.tabsJdq a {float:left;background:url("../images/tableftJ.gif") no-repeat left top;margin:0;padding:0 0 0 5px;text-decoration:none;  background-position:0% -42px; border:0}
+.tabsJdq a span {float:left;display:block;background:url("../images/tabrightJ.gif") no-repeat right top;padding:5px 15px 4px 6px;color:#24618E;background-position:100% -42px; color:#FFF;}
+
+.tablerowhighlight {background-color: #FFC9BA;}
+.tablecount {background-color: #ECEEF0; }

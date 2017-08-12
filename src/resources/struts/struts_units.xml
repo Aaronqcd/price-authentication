@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- default -->
+	<package name="units" extends="default"  namespace="/units">
+	<!-- units -->
+		<action name="unitsList"  class="unitsManagerAction" method="unitsList">
+			<result name="success">/jsp/units/unit_list.jsp</result>
+		</action>  
+		<action name="deleteUnit"  class="unitsManagerAction" method="deleteUnit">
+			<result name="success" type="redirect">/units/unitsList.action</result>
+		</action> 
+		<action name="queryUnit"  class="unitsManagerAction" method="queryUnit">
+			<result name="success">/jsp/units/unit_update.jsp</result>
+		</action>
+		<action name="preAdd"  class="unitsManagerAction" method="preAdd">
+			<result name="success">/jsp/units/unit_add.jsp</result>
+		</action>
+		<action name="saveUnit"  class="unitsManagerAction" method="addUnit">
+			<result name="input">/jsp/units/unit_add.jsp</result>
+			<result name="success" type="redirect">/units/unitsList.action</result>
+		</action>
+		<action name="getUnit"  class="unitsManagerAction" method="getUnit">
+			<result name="success">/jsp/units/unit_update.jsp</result>
+		</action>
+		<action name="modifyUnit"  class="unitsManagerAction" method="modifyUnit">
+			<result name="success"  type="redirect">unitsList.action</result>
+		</action>
+		<action name="queryUnitsSorts"  class="unitsManagerAction" method="queryUnitsSorts">
+			<result name="success" >/jsp/units/units_sort_edit.jsp</result>
+		</action>
+		<action name="saveUnitsSort"  class="unitsManagerAction" method="saveUnitsSort">
+			<result name="success"  type="redirect">unitsList.action</result>
+		</action>
+		<action name="deleteUnitSort"  class="unitsManagerAction" method="deleteUnitSort">
+			<result name="success"  type="redirect">unitsList.action</result>
+		</action>
+</package>
+</struts>

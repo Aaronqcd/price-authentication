@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+*{ margin:0; padding:0; list-style:none; font-size:12px;font-family:"宋体"; font-family:Arial, Helvetica, sans-serif}
+body{ background:url(../images/bj.jpg) repeat-x top left;}
+.logo{ padding-top:77px; margin:auto; width:997px}
+.login{ width:997px; margin:auto; height:375px}
+.login_pic{ float:left}
+.login_wz{ width:349px; height:300px; float:right; background:url(../images/login2.jpg) no-repeat ; padding:75px 0 0 30px}
+.login_wz table td{ font-size:14px; line-height:30px}
+.input1{ height:40px; background:url(../images/pic1.jpg) right no-repeat #fff; width: 313px; border:#cccccc solid 1px}
+.input2{ height:40px; background:url(../images/pic2.jpg) right no-repeat #fff; width: 313px;  border:#cccccc solid 1px}
+.anniu{ width:114px; height:40px; background:url(../images/anniu.jpg) no-repeat; color:#FFFFFF; font-size:16px;  border:0; margin:10px 0 10px 10px}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-3.0.xsd
+         http://www.springframework.org/schema/tx
+      	 http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+         http://www.springframework.org/schema/task 
+         http://www.springframework.org/schema/task/spring-task-3.0.xsd
+         ">
+	
+	<import resource="applicationContext-datasource.xml" />
+	<import resource="applicationContext-Persistence.xml" />
+	<import resource="applicationContext-Dao.xml" />	
+	<import resource="applicationContext-Service.xml" />
+	<import resource="applicationContext-Action.xml" />
+	<import resource="applicationContext-Job.xml" />
+	<import resource="applicationContext-servlet.xml"/>
+	<import resource="applicationContext-autocomplete.xml"/>
+	
+	<!-- Enables the Spring Task @Scheduled programming model -->  
+    <task:executor id="executor" pool-size="5" />  
+    <task:scheduler id="scheduler" pool-size="10" />  
+    <task:annotation-driven executor="executor" scheduler="scheduler" />
+	
+	
+	<!-- 数据字典Utils类 yxf top -->
+	 <bean id="WSUtils" class="com.pemng.serviceSystem.base.util.WSUtils" init-method="init">
+		<property name="basicDataMangerService" ref="basicDataMangerService"></property>
+	 </bean> 
+	<!-- 数据字典Util类 yxf end -->
+	
+</beans>
+
+
+
+
+
+
+

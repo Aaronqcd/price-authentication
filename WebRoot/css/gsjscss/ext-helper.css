@@ -1,0 +1,105 @@
+﻿/* sky.he add ext-patch.css */
+ext-el-mask-msg div,.loading-indicator,.x-tab-strip span.x-tab-strip-text,.x-form-invalid-msg,.x-small-editor .x-form-field,.x-fieldset legend,.x-btn,.x-btn button,.x-toolbar td,.x-toolbar span,.x-toolbar input,.x-toolbar div,.x-toolbar select,.x-toolbar label,.x-grid3-hd-row td,.x-grid3-row td,.x-grid3-summary-row td,.x-grid3-topbar,.x-grid3-bottombar,.x-grid-group-hd div,.x-grid-empty,.x-dd-drag-ghost,.x-tree-node,.x-date-middle,.x-date-left,.x-date-right,.x-date-inner a,.x-date-mp td,.x-date-mp-btns button,.x-tip .x-tip-mc,.x-tip .x-tip-header-text,.x-tip .x-tip-body,.x-menu-list-item,#x-debug-browser .x-tree .x-tree-node a span,.x-combo-list-hd,.x-combo-list-small .x-combo-list-item,.x-panel-header,.x-panel-tl .x-panel-header,.x-panel-mc,.x-window-tl .x-window-header,.x-window-mc,.x-progress-text,.x-date-inner th,.x-date-mmenu .x-menu-item {font-size:12px}  
+
+.disabled-x-grid3-row-checker
+{
+	background-image:url(ext-ux/icons/chexbox-dis.png);
+	background-position:2px 2px;
+	background-repeat:no-repeat;
+	background-color:transparent;
+	height:18px;
+	width:100%;
+}
+
+/* 加号 */
+.extgrid-btn-add {background-image:url(../extjs/shared/icons/fam/add.gif) !important;}
+.extgrid-btn-add-disabled {background-image:url(ext-ux/icons/fam/add-dis.gif) !important;}
+
+/* 减号 */
+.extgrid-btn-remove {background-image:url(../extjs/shared/icons/fam/delete.gif) !important;}
+.extgrid-btn-remove-disabled {background-image:url(ext-ux/icons/fam/delete-dis.gif) !important;}
+
+/* 叉号 */
+.ext-ico-cross {background-image:url(../extjs/shared/icons/fam/cross.gif) !important;}
+.ext-ico-cross-disabled {background-image:url(ext-ux/icons/fam/cross-dis.gif) !important;   }
+
+/* 保存 */
+.extgrid-btn-save {background-image:url(../extjs/shared/icons/save.gif) !important;}
+.extgrid-btn-save-disabled {background-image:url(ext-ux/icons/save-dis.gif) !important;}
+
+/* 插件 */
+.extgrid-btn-option {background-image:url(../extjs/shared/icons/fam/plugin.gif) !important;}
+.extgrid-btn-option-disabled {background-image:url(ext-ux/icons/fam/plugin-dis.gif) !important;}
+
+/* 刷新 */
+.ext-ico-refresh{background-image:url(ext-ux/icons/refresh.gif) !important;}
+.ext-ico-refresh-disabled{background-image:url(ext-ux/icons/refresh-dis.gif) !important;}
+
+/* 编辑 */
+.ext-ico-edit{background-image:url(ext-ux/icons/pencil.png) !important;}
+.ext-ico-edit-disabled{background-image:url(ext-ux/icons/pencil-dis.png) !important;}
+
+/* 帮助 */
+.ext-ico-help {background-image: url(ext-ux/icons/help.gif) !important;}
+.ext-ico-help-disabled {background-image: url(ext-ux/icons/help-dis.gif) !important;}
+
+/* 展开 */
+.ext-ico-expandall{background-image:url(ext-ux/icons/expand-all.gif) !important;}
+.ext-ico-expandall-disabled{background-image:url(ext-ux/icons/expand-all-dis.gif) !important;}
+
+/* 折叠 */
+.ext-ico-collapseall{background-image:url(ext-ux/icons/collapse-all.gif) !important;}
+.ext-ico-collapseall-disabled{background-image:url(ext-ux/icons/collapse-all-dis.gif) !important;}
+
+/* 锁 */
+.ext-ico-lock{background-image:url(ext-ux/icons/lock.gif) !important;}
+.ext-ico-lock-disabled{background-image:url(ext-ux/icons/lock-dis.gif) !important;}
+
+/* 视图 */
+.ext-ico-view{background-image:url(ext-ux/icons/view.png) !important;}
+
+/* 视图-树(左右分割) */
+.ext-ico-SideTree{background-image:url(ext-ux/icons/side_tree.png) !important;}
+
+/* 视图(左右平均分割) */
+.ext-ico-SideLR{background-image:url(ext-ux/icons/side_lr.png) !important;}
+
+/* 视图-水平分割 */
+.ext-ico-SideHorizontal{background-image:url(ext-ux/icons/side_horizontal.png) !important;}
+
+/* 箭头-右转 */
+.ext-ico-ArrowTurnRight{background-image:url(ext-ux/icons/arrow_turn_right.png) !important;}
+.ext-ico-ArrowTurnRight-disabled{background-image:url(ext-ux/icons/arrow_turn_right-dis.png) !important;}
+
+/* 箭头-右分支 */
+.ext-ico-ArrowRightBranch{background-image:url(ext-ux/icons/arrow_right_branch.png) !important;}
+.ext-ico-ArrowRightBranch-disabled{background-image:url(ext-ux/icons/arrow_right_branch-dis.png) !important;}
+
+/* 网络磁盘 */
+.ext-ico-netdisk{background-image:url(ext-ux/icons/netdisk.gif) !important;}
+
+/* 地球 */
+.ext-ico-earth{background-image:url(ext-ux/icons/earth.gif) !important;}
+
+/* 两个人 */
+.ext-ico-TwoPerson{background-image:url(ext-ux/icons/two-person.gif) !important;}
+
+/* 垃圾桶 */
+.ext-ico-garbage{background-image:url(ext-ux/icons/garbage.gif) !important;}
+
+/* 搜索 */
+.ext-ico-search{background-image:url(ext-ux/icons/search.gif) !important;}
+
+/* 分享 */
+.ext-ico-partake{background-image:url(ext-ux/icons/partake.gif) !important;}
+
+/* 返回 */
+.ext-ico-return{background-image:url(ext-ux/icons/return.gif) !important;}
+
+/* 主页 */
+.ext-ico-home{background-image:url(ext-ux/icons/home.gif) !important;}
+
+/* ie下树节点文字中英数混排时不美观 */
+.ext-ie6 .x-tree-node {
+    font: 11px Tahoma,Arial;
+}

@@ -1,0 +1,15 @@
+/* CSS Document */
+*{ margin:0; padding:0; list-style:none; font-size:13px;font-family:  "Microsoft Yahei", "新宋体", "宋体"; }
+table{border-collapse:collapse;}
+a{ text-decoration:none}
+
+.clear{ clear:both}
+
+/*左边便捷菜单*/
+.left_menu{ float:left; width:190px;}
+.left_menu ul{ margin:12px}
+.left_menu li{ background:url(../images/jiantou2.png) no-repeat 10px 9px; height:30px; line-height:30px; padding-left:28px;}
+.left_menu a{ color:#000000}
+.left_menubt{ background:url(../images/bj3.png) repeat-x; height:32px;}
+.left_menubt a{ float:right; margin-right:10px; color:#000;padding-top:6px; }
+.left_menubt p{ background:url(../images/jiantou.png) no-repeat 10px 12px; height:32px; line-height:32px; padding-left:23px; font-size:14px; color:#0054A5; float:left }
