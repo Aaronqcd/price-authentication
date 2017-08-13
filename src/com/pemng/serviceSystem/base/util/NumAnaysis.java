@@ -1,4 +1,4 @@
-﻿package com.pemng.serviceSystem.base.util;
+package com.pemng.serviceSystem.base.util;
 
 /**
  * 科学数字解析。

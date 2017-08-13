@@ -20,11 +20,12 @@ package com.pemng.common.util;
  * 增加文件头
  *
  */
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
-import sun.io.CharToByteConverter;
+import java.nio.ByteBuffer;
+import java.nio.charset.Charset;
 
 
 
@@ -157,8 +158,12 @@ public class TSaveToTxtFile {
         int length = 0;
         // 得到 value 长度
         try {
-            CharToByteConverter toByte = CharToByteConverter.getConverter("GB2312");
-            byte[] orig = toByte.convertAll(value.toCharArray());
+            //CharToByteConverter toByte = CharToByteConverter.getConverter("GB2312");
+            //byte[] orig = toByte.convertAll(value.toCharArray());
+			//length = orig.length;
+			Charset charset = Charset.forName("UTF-8");
+			ByteBuffer byteBuffer = charset.encode(value);
+			byte[] orig = new byte[byteBuffer.remaining()];
             length = orig.length;
         }
         catch (Exception ex) {
