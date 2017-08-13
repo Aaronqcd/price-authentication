@@ -50,7 +50,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 	
 	<!-- Character Encoding Filter -->
 	<filter>
-        <filter-name>Set Character Encoding</filter-name>
+        <filter-name>SetCharacterEncoding</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
         <init-param>
             <param-name>encoding</param-name>
@@ -63,7 +63,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
         </init-param>
     </filter>
     <filter-mapping>
-        <filter-name>Set Character Encoding</filter-name>
+        <filter-name>SetCharacterEncoding</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
     
@@ -86,7 +86,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 		<filter-class>com.pemng.serviceSystem.base.interceptor.CrossScriptingFilter</filter-class>
 		<init-param>
 			<param-name>excludeActions</param-name>
-			<param-value></param-value>
+			<param-value>/*</param-value>
 		</init-param>
 	</filter>
 	
